@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Driver Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    #logo {
+      width: 150px;
+      height: auto;
+    }
+    #login {
+      display: none;
+      padding: 20px;
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+    }
+    input[type='email'], input[type='password'] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    .options button {
+      width: 48%;
+      background-color: #03dac6;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Smart Driver Logo">
+  </div>
+
+  <div id="login">
+    <h2>Login Smart Driver</h2>
+    <input type="email" id="email" placeholder="Digite seu e-mail">
+    <input type="password" id="password" placeholder="Digite sua senha">
+    <button onclick="validateLogin()">Entrar</button>
+    <div class="options">
+      <button onclick="rememberPassword()">Lembrar senha</button>
+      <button onclick="register()">Cadastrar</button>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('splash').style.display = 'none';
+        document.getElementById('login').style.display = 'block';
+      }, 2000);
+    };
+
+    function validateLogin() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        alert('Digite um e-mail válido.');
+        return;
+      }
+      if (password.length < 6) {
+        alert('A senha deve ter pelo menos 6 caracteres.');
+        return;
+      }
+
+      alert('Login realizado com sucesso!');
+    }
+
+    function rememberPassword() {
+      alert('Senha será lembrada.');
+    }
+
+    function register() {
+      alert('Redirecionando para cadastro...');
+    }
+  </script>
+</body>
+</html>

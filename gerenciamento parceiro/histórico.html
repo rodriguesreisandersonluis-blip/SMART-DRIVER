@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil - Smart Driver</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <h2>Perfil do Motorista</h2>
+  <div class="form-group">
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome" placeholder="Seu nome" />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="seu@email.com" />
+  </div>
+  <div class="form-group">
+    <label for="senha">Nova senha</label>
+    <input type="password" id="senha" placeholder="********" />
+  </div>
+  <div class="form-group">
+    <button>Salvar alterações</button>
+  </div>
+</body>
+</html>
